@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        /* Style de base pour la barre de navigation */
+            /* Style de base pour la barre de navigation */
+            .navbar {
+            background-color: #83c4f3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        /* Style pour le bouton "Log Out" */
+        .logout {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+         /* Style pour centrer l'image horizontalement */
+         .center-image {
+            max-width: 100%;
+            margin: 0 auto; 
+            max-width: 344px; height: 30px; width: 60px;
+        }
+
+        /* Style pour le conteneur des boutons */
+        .button-container {
+            display: flex;
+            align-items: center;
+        }
+           /* Style pour les boutons */
+           .button-container button {
+            margin-left: 10px; /* Espacement entre les boutons */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" style="background-color: #83c4f3;">
+        <!-- Navbar content -->
+      
+        <img src="assets/logo.jpg" alt="Logo"  class="center-image">
+        <form class="container-fluid justify-content-start">
+          <button  class="btn button-container" type="button">Dashboard</button>
+          <button (click)="logout()" class="logout" style="margin-left: auto;">log out</button>
+        </form>
+      
+
+    </nav>
+    <!-- Insérez le lien du rapport power bi-->
+    <iframe width="1600" height="1200" src="https://app.powerbi.com/view?r=eyJrIjoiYzg0ZmYwMDItY2RiZi00MzBlLTlmMGMtYTUzYTAwYjQ4MjkxIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9"></iframe>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+          <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+            <div class="panel border bg white">
+                <div class="panel-heading">
+                    <h3 class="pt-3 font-weight-bold"> se connecter</h3>
+                </div>
+                <div class="panel-body p-3">
+                    <form [formGroup] = "loginForm">
+                        <div class="form-group pt-3">
+                            <div class="input-field" [class.error]="loginForm.controls['nomAgence'].dirty && loginForm.hasError('required','nomAgence')">
+                             <span class="fa fa-user p-2"></span>
+                             <input formControlName="nomAgence" type="text" placeholder="Nom Agence">
+                            </div>
+                        </div>
+                        <small *ngIf="loginForm.controls['nomAgence'].dirty && loginForm.hasError('required','nomAgence')" class="text-danger">*Veuillez Entrer le nom d'agence </small>
+                        <div class="form-group pt-3">
+                            <div class="input-field" [class.error]="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">
+                             <span class="fa fa-lock p-2"></span>
+                             <input formControlName="password"  [type]= "type" placeholder = "password">
+                             <span (click)= "hideShowPass()" class="fa {{eyeIcon}}"></span>
+                            </div>
+                        </div>
+                        <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')" class="text-danger">*Veuillez Entrer votre mot de passe</small>
+                        <div class="form-inline fr mt-4">
+                            <a id="forget" class="font-weight-bold"> Mot de passe Oublié</a>
+                        </div>
+                        <button (click)="onLogin()" type="submit" class="btn btn-primary btn-block mt-4  w-100"> se connecter </button>
+                        <div class="text-center pt-4 text-muted">crée un compte <a id="'forget" routerLink="/signup"> s'inscrire</a></div>
+                    </form>
+
+                </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+</div>
